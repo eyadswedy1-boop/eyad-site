@@ -1,57 +1,59 @@
 <!DOCTYPE html>
 <html lang="ar">
 <head>
-  <meta charset="UTF-8">
-  <title>Calculator</title>
-  <style>
-    body {
-      background: #111;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Arial;
-    }
+<meta charset="UTF-8">
+<title>Calculator</title>
 
-    .calculator {
-      background: #222;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 20px #000;
-    }
+<style>
+body {
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: Arial;
+}
 
-    .display {
-      width: 100%;
-      height: 60px;
-      background: #000;
-      color: #0f0;
-      font-size: 24px;
-      text-align: right;
-      padding: 10px;
-      border: none;
-      margin-bottom: 10px;
-    }
+.calculator {
+  background: #222;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #000;
+}
 
-    .buttons {
-      display: grid;
-      grid-template-columns: repeat(4, 60px);
-      gap: 10px;
-    }
+.display {
+  width: 100%;
+  height: 60px;
+  background: #000;
+  color: #0f0;
+  font-size: 24px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  margin-bottom: 10px;
+}
 
-    button {
-      height: 60px;
-      font-size: 20px;
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-    }
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
+}
 
-    .num { background: #333; color: white; }
-    .op { background: orange; color: white; }
-    .eq { background: green; color: white; }
-    .clear { background: red; color: white; }
-  </style>
+button {
+  height: 60px;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.num { background: #333; color: white; }
+.op { background: orange; color: white; }
+.eq { background: green; color: white; }
+.clear { background: red; color: white; }
+</style>
 </head>
+
 <body>
 
 <div class="calculator">
@@ -81,24 +83,24 @@
 </div>
 
 <script>
-  let display = document.getElementById("display");
+let display = document.getElementById("display");
 
-  function append(value) {
-    display.value += value;
-  }
+function append(value) {
+  display.value += value;
+}
 
-  function clearDisplay() {
-    display.value = "";
-  }
+function clearDisplay() {
+  display.value = "";
+}
 
-  function calculate() {
-    try {
-      display.value = eval(display.value);
-    } catch {
-      display.value = "Error";
-    }
+function calculate() {
+  try {
+    display.value = eval(display.value);
+  } catch {
+    display.value = "Error";
   }
+}
 </script>
 
 </body>
-                                                 </html>
+</html>
